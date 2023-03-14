@@ -1,0 +1,270 @@
+:root {
+  /* Primary */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* box */
+  --Box-Light-red: hsl(0, 100%, 95%);
+  --Box-Orangey-yellow: hsl(39, 100%, 95%);
+  --Box-Green-teal: hsl(166, 100%, 95%);
+  --Box-Cobalt-blue: hsl(234, 85%, 95%);
+
+  /* Gradients */
+  /* background */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  /* Circle */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--White);
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+header {
+  padding: 1.5rem 4rem 2.3rem;
+  border-radius: 0 0 32px 32px;
+
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+
+  color: var(--Light-lavender);
+}
+
+header > h1 {
+  margin: 1.4rem 0;
+  font-size: 1.8rem;
+}
+
+.circle {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--Violet-blue),
+    var(--Light-royal-blue)
+  );
+
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+}
+
+.circle span {
+  font-weight: 800;
+  font-size: 4.8rem;
+
+  color: var(--White);
+}
+
+.circle p {
+  font-size: 1.4rem;
+}
+
+header > h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--White);
+}
+
+header > p {
+  font-size: 1.4rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+main h1 {
+  font-size: 2.2rem;
+}
+
+.colorBox {
+  margin: 1rem 0;
+  padding: 1.6rem;
+  border-radius: 12px;
+  font-size: 1.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* red */
+.red {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--Box-Light-red);
+  color: var(--Light-red);
+}
+
+.red .left {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.red .right {
+  color: var(--Light-lavender);
+}
+
+.red .right span {
+  color: var(--Dark-gray-blue);
+}
+/* yellow */
+.yellow {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--Box-Orangey-yellow);
+  color: var(--Orangey-yellow);
+}
+
+.yellow .left {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.yellow .right {
+  color: var(--Light-lavender);
+}
+
+.yellow .right span {
+  color: var(--Dark-gray-blue);
+}
+/* green */
+.green {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--Box-Green-teal);
+  color: var(--Green-teal);
+}
+
+.green .left {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.green .right {
+  color: var(--Light-lavender);
+}
+
+.green .right span {
+  color: var(--Dark-gray-blue);
+}
+/* blue */
+.blue {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--Box-Cobalt-blue);
+  color: var(--Cobalt-blue);
+}
+
+.blue .left {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.blue .right {
+  color: var(--Light-lavender);
+}
+
+.blue .right span {
+  color: var(--Dark-gray-blue);
+}
+
+.btn {
+  margin-top: 0.8rem;
+  padding: 1.5rem;
+  border-radius: 40px;
+  border: none;
+  width: 100%;
+
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  cursor: pointer;
+}
+.btn:active {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+}
+
+@media (min-width: 650px) {
+  body {
+    display: grid;
+
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 55rem;
+    box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+  }
+
+  header {
+    padding: 1rem 4rem 2.3rem;
+    border-radius: 32px;
+  }
+
+  header > h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .circle {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  header > h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--White);
+  }
+
+  header > p {
+    font-size: 1.4rem;
+  }
+}
